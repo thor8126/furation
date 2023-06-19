@@ -17,11 +17,29 @@ Brief project description
 
 2. Start the server: `nodemon index.js`.
 
-### Note:-
+## Note:-
 
 - I've hosted this api on render.com.
-- API url - `https://sdffsad.com/`
+- API url - `https://furation-backend.onrender.com/`
 
-## Testing:-
+## URLS:-
 
-1.
+1.  To retrieve all items from the database, send a GET request to
+
+        https://furation-backend.onrender.com/api/items.
+
+2.  To retrieve a specific item by its ID, send a GET request to below url, replacing :id with the actual item ID.
+
+        https://furation-backend.onrender.com/api/items/:id
+
+3.  To create a new item, send a POST request to below url with a JSON payload containing the item data.
+
+        https://furation-backend.onrender.com/api/items
+
+4.  To update an existing item by its ID, send a PUT request to below url , replacing :id with the actual item ID, and include the updated item data in the request body.
+
+        https://furation-backend.onrender.com/api/items/:id
+
+5.  To delete an item by its ID, send a DELETE request to below url, replacing :id with the actual item ID.
+
+        https://furation-backend.onrender.com/api/items/:id
