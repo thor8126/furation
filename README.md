@@ -24,6 +24,8 @@ Brief project description
 
 ## URLS:-
 
+# Import thunderclient config in your thunderclient extension.
+
 1.  To retrieve all items from the database, send a GET request to
 
         https:///furation.onrender.com/api/items.

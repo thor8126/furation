@@ -1,0 +1,99 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "furation_backend",
+    "dateExported": "2023-06-19T16:47:25.610Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c76147c1-73c9-4277-b843-60e71b56098c",
+            "colId": "536caf75-39cc-4976-89ef-8962cd9c8e16",
+            "containerId": "",
+            "name": "get all items",
+            "url": "http://localhost:3000/api/items",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-19T10:20:59.327Z",
+            "modified": "2023-06-19T10:39:33.532Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "85ba6ac7-b4a3-4805-83a1-aa53af595c14",
+            "colId": "536caf75-39cc-4976-89ef-8962cd9c8e16",
+            "containerId": "",
+            "name": "createItem",
+            "url": "http://localhost:3000/api/items",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-06-19T10:23:34.634Z",
+            "modified": "2023-06-19T10:28:37.279Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"sampledata2\",\n  \"description\":\"this is a sample data2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7ef0bbcd-c7a8-41e0-8863-f68a48e299e2",
+            "colId": "536caf75-39cc-4976-89ef-8962cd9c8e16",
+            "containerId": "",
+            "name": "get specific item by id",
+            "url": "http://localhost:3000/api/items/64902d85559287269dc4b179",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-06-19T10:25:06.540Z",
+            "modified": "2023-06-19T10:32:03.377Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5b1aff4c-f374-4f69-b89a-47b513865ead",
+            "colId": "536caf75-39cc-4976-89ef-8962cd9c8e16",
+            "containerId": "",
+            "name": "update by id",
+            "url": "http://localhost:3000/api/items/64902d7a559287269dc4b177",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-06-19T10:32:46.200Z",
+            "modified": "2023-06-19T16:46:07.290Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"this is updated\",\n  \"description\":\"this is a updated data2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2510cf2a-5db5-4e67-8b45-a8f7dc4a3b3a",
+            "colId": "536caf75-39cc-4976-89ef-8962cd9c8e16",
+            "containerId": "",
+            "name": "delete by id",
+            "url": "https:///furation.onrender.com/api/items/64902dd5559287269dc4b17c",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-06-19T16:46:38.351Z",
+            "modified": "2023-06-19T16:47:01.468Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

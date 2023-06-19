@@ -13,35 +13,55 @@ app.use(bodyParser.json());
 
 // Routes
 app.get("/", (req, res) => {
-  const string = `
-  Api by Lakhvinder Singh!,
+  const html = `
+    <html>
+      <head>
+        <title>API Documentation</title>
+      </head>
+      <body>
+        <h1>API by Lakhvinder Singh!</h1>
+        <h1>Hosted Url: https://furation.onrender.com/</h1>
+        <h3>You'll need thunderclient or postman to test these apis.</h3>
+        <h5>* Import thunderclient config from root for testing urls.</h5>
+        <h2>Endpoints:</h2>
 
+        <ol>
+          <li>
+            To retrieve all items from the database, send a GET request to:
+            <pre>https://furation.onrender.com/api/items</pre>
+          </li>
 
-1.  To retrieve all items from the database, send a GET request to
+          <li>
+            To retrieve a specific item by its ID, send a GET request to the following URL, replacing <code>:id</code> with the actual item ID:
+            <pre>https://furation.onrender.com/api/items/:id</pre>
+          </li>
 
-        https:///furation.onrender.com/api/items.
+          <li>
+            To create a new item, send a POST request to the following URL with a JSON payload containing the item data:
+            <pre>https://furation.onrender.com/api/items</pre>
+          </li>
 
-2.  To retrieve a specific item by its ID, send a GET request to below url, replacing :id with the actual item ID.
+          <li>
+            To update an existing item by its ID, send a PUT request to the following URL, replacing <code>:id</code> with the actual item ID, and include the updated item data in the request body:
+            <pre>https://furation.onrender.com/api/items/:id</pre>
+          </li>
 
-        https:///furation.onrender.com/api/items/:id
+          <li>
+            To delete an item by its ID, send a DELETE request to the following URL, replacing <code>:id</code> with the actual item ID:
+            <pre>https://furation.onrender.com/api/items/:id</pre>
+          </li>
+        </ol>
+      </body>
+    </html>
+  `;
 
-3.  To create a new item, send a POST request to below url with a JSON payload containing the item data.
-
-        https:///furation.onrender.com/api/items
-
-4.  To update an existing item by its ID, send a PUT request to below url , replacing :id with the actual item ID, and include the updated item data in the request body.
-
-        https:///furation.onrender.com/api/items/:id
-
-5.  To delete an item by its ID, send a DELETE request to below url, replacing :id with the actual item ID.
-
-        https:///furation.onrender.com/api/items/:id`;
-
-  res.send(string);
+  res.header("Content-Type", "text/html");
+  res.send(html);
 });
 
 app.use("/", require("./routes/crudRoutes"));
 
+// for deployment
 module.exports = app;
 
 app.listen(PORT, () => {
