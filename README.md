@@ -28,7 +28,7 @@ Brief project description
 
 1.  To retrieve all items from the database, send a GET request to
 
-        https://furation.onrender.com/api/items.
+        https://furation.onrender.com/api/items
 
 2.  To retrieve a specific item by its ID, send a GET request to below url, replacing :id with the actual item ID.
 
@@ -45,3 +45,10 @@ Brief project description
 5.  To delete an item by its ID, send a DELETE request to below url, replacing :id with the actual item ID.
 
         https://furation.onrender.com/api/items/:id
+
+- JSON payload for create and update is like:
+
+  {
+  "name":"sampledata2",
+  "description":"this is a sample data2"
+  }
