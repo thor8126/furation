@@ -1,9 +1,8 @@
-require('dotenv').config();
+require("dotenv").config();
 require("./config/db");
-const express = require('express');
-const bodyParser = require('body-parser');
-const CORS = require('cors');
-
+const express = require("express");
+const bodyParser = require("body-parser");
+const CORS = require("cors");
 
 const app = express();
 app.use(CORS());
@@ -13,15 +12,14 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("Api by Lakhvinder Singh!");
+});
 
-app.get('/', (req, res) => {
-  res.send('Api by Lakhvinder Singh!')
-})
-    
-
+app.use("/", require("./routes/crudRoutes"));
 
 module.exports = app;
 
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`)
-})
+  console.log(`Example app listening on port ${PORT}`);
+});
